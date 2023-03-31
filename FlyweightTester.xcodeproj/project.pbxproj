@@ -14,11 +14,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A4EB091429D75C4500D41C97 /* Flyweight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flyweight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4EB091429D75C4500D41C97 /* FlyweightTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyweightTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4EB091729D75C4500D41C97 /* FlyweightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyweightApp.swift; sourceTree = "<group>"; };
 		A4EB091929D75C4500D41C97 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A4EB091B29D75C4600D41C97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4EB091E29D75C4600D41C97 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A4EB092629D75E6200D41C97 /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
+		A4EB092729D75E6C00D41C97 /* ci_pre_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_pre_xcodebuild.sh; sourceTree = "<group>"; };
+		A4EB092829D75E7800D41C97 /* ci_post_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_xcodebuild.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 		A4EB090B29D75C4500D41C97 = {
 			isa = PBXGroup;
 			children = (
+				A4EB092529D75E2A00D41C97 /* ci_scripts */,
 				A4EB091629D75C4500D41C97 /* Flyweight */,
 				A4EB091529D75C4500D41C97 /* Products */,
 			);
@@ -43,7 +47,7 @@
 		A4EB091529D75C4500D41C97 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A4EB091429D75C4500D41C97 /* Flyweight.app */,
+				A4EB091429D75C4500D41C97 /* FlyweightTester.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,12 +71,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A4EB092529D75E2A00D41C97 /* ci_scripts */ = {
+			isa = PBXGroup;
+			children = (
+				A4EB092629D75E6200D41C97 /* ci_post_clone.sh */,
+				A4EB092729D75E6C00D41C97 /* ci_pre_xcodebuild.sh */,
+				A4EB092829D75E7800D41C97 /* ci_post_xcodebuild.sh */,
+			);
+			path = ci_scripts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A4EB091329D75C4500D41C97 /* Flyweight */ = {
+		A4EB091329D75C4500D41C97 /* FlyweightTester */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A4EB092229D75C4600D41C97 /* Build configuration list for PBXNativeTarget "Flyweight" */;
+			buildConfigurationList = A4EB092229D75C4600D41C97 /* Build configuration list for PBXNativeTarget "FlyweightTester" */;
 			buildPhases = (
 				A4EB091029D75C4500D41C97 /* Sources */,
 				A4EB091129D75C4500D41C97 /* Frameworks */,
@@ -82,9 +96,9 @@
 			);
 			dependencies = (
 			);
-			name = Flyweight;
+			name = FlyweightTester;
 			productName = Flyweight;
-			productReference = A4EB091429D75C4500D41C97 /* Flyweight.app */;
+			productReference = A4EB091429D75C4500D41C97 /* FlyweightTester.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +116,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A4EB090F29D75C4500D41C97 /* Build configuration list for PBXProject "Flyweight" */;
+			buildConfigurationList = A4EB090F29D75C4500D41C97 /* Build configuration list for PBXProject "FlyweightTester" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +129,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A4EB091329D75C4500D41C97 /* Flyweight */,
+				A4EB091329D75C4500D41C97 /* FlyweightTester */,
 			);
 		};
 /* End PBXProject section */
@@ -280,7 +294,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.TextNow.Flyweight;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FivesquareSoftware.Flyweight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -309,7 +323,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.TextNow.Flyweight;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FivesquareSoftware.Flyweight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,7 +334,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A4EB090F29D75C4500D41C97 /* Build configuration list for PBXProject "Flyweight" */ = {
+		A4EB090F29D75C4500D41C97 /* Build configuration list for PBXProject "FlyweightTester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A4EB092029D75C4600D41C97 /* Debug */,
@@ -329,7 +343,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A4EB092229D75C4600D41C97 /* Build configuration list for PBXNativeTarget "Flyweight" */ = {
+		A4EB092229D75C4600D41C97 /* Build configuration list for PBXNativeTarget "FlyweightTester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A4EB092329D75C4600D41C97 /* Debug */,
